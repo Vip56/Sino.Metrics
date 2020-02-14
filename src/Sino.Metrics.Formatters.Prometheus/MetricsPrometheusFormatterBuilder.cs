@@ -1,7 +1,5 @@
 ﻿using Sino.Metrics.Formatters.Prometheus;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace App.Metrics
 {
@@ -22,6 +20,42 @@ namespace App.Metrics
             }
 
             var formatter = new MetricsPrometheusTextOutputFormatter(options);
+
+            return metricFormattingBuilder.Using(formatter, false);
+        }
+
+        public static IMetricsBuilder AsPrometheusPlainText(
+            this IMetricsOutputFormattingBuilder metricFormattingBuilder,
+            Action<MetricsPrometheusOptions> setupAction)
+        {
+            if (metricFormattingBuilder == null)
+            {
+                throw new ArgumentNullException(nameof(metricFormattingBuilder));
+            }
+
+            if (setupAction == null)
+            {
+                throw new ArgumentNullException(nameof(setupAction));
+            }
+
+            var options = new MetricsPrometheusOptions();
+
+            setupAction.Invoke(options);
+
+            var formatter = new MetricsPrometheusTextOutputFormatter(options);
+
+            return metricFormattingBuilder.Using(formatter, false);
+        }
+
+        public static IMetricsBuilder AsPrometheusPlainText(
+           this IMetricsOutputFormattingBuilder metricFormattingBuilder)
+        {
+            if (metricFormattingBuilder == null)
+            {
+                throw new ArgumentNullException(nameof(metricFormattingBuilder));
+            }
+
+            var formatter = new MetricsPrometheusTextOutputFormatter();
 
             return metricFormattingBuilder.Using(formatter, false);
         }
