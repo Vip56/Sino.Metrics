@@ -12,7 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".global", ".global", "{3090
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sino.Metrics.Formatters.Prometheus", "src\Sino.Metrics.Formatters.Prometheus\Sino.Metrics.Formatters.Prometheus.csproj", "{BFD1B903-0628-4954-8890-1AB3B7C75FB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sino.Metrics.Formatters.Prometheus", "src\Sino.Metrics.Formatters.Prometheus\Sino.Metrics.Formatters.Prometheus.csproj", "{BFD1B903-0628-4954-8890-1AB3B7C75FB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ADCC5298-4833-4CCF-B424-FDC2950AD605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "test\TestWebApp\TestWebApp.csproj", "{4EC42D5B-3AFD-4359-B731-D4068C5BDB20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,12 +28,17 @@ Global
 		{BFD1B903-0628-4954-8890-1AB3B7C75FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFD1B903-0628-4954-8890-1AB3B7C75FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFD1B903-0628-4954-8890-1AB3B7C75FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC42D5B-3AFD-4359-B731-D4068C5BDB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC42D5B-3AFD-4359-B731-D4068C5BDB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC42D5B-3AFD-4359-B731-D4068C5BDB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC42D5B-3AFD-4359-B731-D4068C5BDB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BFD1B903-0628-4954-8890-1AB3B7C75FB0} = {8E3A1D8F-A367-4E02-89F1-6BCE232D75D6}
+		{4EC42D5B-3AFD-4359-B731-D4068C5BDB20} = {ADCC5298-4833-4CCF-B424-FDC2950AD605}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36593337-E879-456C-AA8E-39DCB10539D6}
