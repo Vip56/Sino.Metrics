@@ -20,4 +20,4 @@ $revision = [convert]::ToInt32($revision, 10)
 
 exec { & dotnet pack .\src\Sino.Metrics.Formatters.Prometheus -c Release -o .\artifacts --version-suffix=$revision }
 
-exec { & dotnet nuget push .\src\Sino.Metrics.Formatters.Prometheus\artifacts\*.nupkg -k oy2jmipizcth3alphx7qwctmw36p3orexpnve3amfaswgu -s https://api.nuget.org/v3/index.json }
+exec { & dotnet nuget push .\src\Sino.Metrics.Formatters.Prometheus\artifacts\*.nupkg -k oy2ldo4cgyv5lpfkc7caa3rgnogctf7epa2m3urthba5ni -s https://api.nuget.org/v3/index.json }
